@@ -1,0 +1,11 @@
+{
+  "name": "aurelia",
+  "version": "1.0.0",
+  "description": "Vinnovera arbetsprov i Aurelia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Per Stenström",
+  "license": "ISC"
+}
