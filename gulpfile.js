@@ -24,8 +24,9 @@
 		};
 
 	/* Style */
+	require('require-dir')('build/tasks');
 
-	gulp.task("csswatch", ["styl"], function() {
+	gulp.task("cssExtraWatch", ["styl"], function() {
 		chokidar(paths.css.listen, function(ev, path) {
 			console.log("[" + chalk.green("glob-chokidar") + "] File event '" + chalk.cyan(ev) + "' in file: " + chalk.magenta(path));
 
@@ -42,7 +43,7 @@
 
 	/* Scripts */
 
-	gulp.task("jswatch", function() {
+	gulp.task("jsExtraWatch", function() {
 		chokidar(paths.js.listen, function(ev, path) {
 			console.log("[" + chalk.green("glob-chokidar") + "] File event '" + chalk.cyan(ev) + "' in file: " + chalk.magenta(path));
 
@@ -52,9 +53,9 @@
 		});
 	});
 
-	gulp.task("watch", ["jswatch", "csswatch"]);
+	gulp.task("ExtraWatch", ["jsExtraWatch", "cssExtraWatch"]);
 
-	gulp.task("default", ["watch"]);
+	gulp.task("default", ["ExtraWatch"]);
 
 	function stylError(err) {
 		console.log(err.message);
