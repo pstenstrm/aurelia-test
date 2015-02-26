@@ -36,7 +36,10 @@
 
 	gulp.task("styl", function() {
 		return gulp.src(paths.css.source)
-			.pipe(stylus({use: [nib()]})
+			.pipe(stylus({
+				use: [nib()],
+				url: 'url'
+			})
 			.on('error', stylError))
 			.pipe(gulp.dest(paths.css.dest));
 	});
