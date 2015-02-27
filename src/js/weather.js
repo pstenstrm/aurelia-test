@@ -9,7 +9,7 @@ export class Weather {
 	constructor(http) {
 		this.http = http;
 		this.location = 'Paris';
-		this.weather= [];
+		this.locations = [];
 	}
 
 	activate() {
@@ -17,8 +17,12 @@ export class Weather {
 	}
 
 	search() {
-		return this.http.jsonp(url + this.location).then(response => {
-			this.weather.push(response);
+		return this.http.get(url + this.location).then(response => {
+			var
+				cleanResponse = response.response.replace(/^"|"$/g, "'"),
+				json = JSON.parse(cleanResponse);
+
+			this.locations.push(json);
 		});
 	}
 }
