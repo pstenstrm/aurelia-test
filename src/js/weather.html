@@ -7,4 +7,12 @@
 			<button type="submit" class="btn search-btn">Search</button>
 		</form>
 	</fieldset>
+
+	<import from='./weather-card'></import>
+
+	<ul class="weather-cards">
+		<li repeat.for="weather of locations">
+			<weather-card weather.bind="weather"></weather-card>
+		</li>
+	</ul>
 </template>
