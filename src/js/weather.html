@@ -2,8 +2,8 @@
 	<fieldset class="weather">
 		<legend class="heading">How's the weather in...</legend>
 		<form submit.delegate="search()" class="search-box">
-			<label class="label" for="search">Location:</label>
-			<input type="search" class="search" value="paris" id="search">
+			<label class="label" for="location">Location:</label>
+			<input type="search" class="search" id="location" value.bind="location" placeholde="Paris">
 			<button type="submit" class="btn search-btn">Search</button>
 		</form>
 	</fieldset>
