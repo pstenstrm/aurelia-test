@@ -1,10 +1,10 @@
-html,
-body {
-  height: 100%;
+html {
+  min-height: 100%;
 }
 body {
   margin: 0;
   background: linear-gradient(144deg, #f7f4d6, #f7f4d6 50%, #abd4e2);
+  background-size: cover;
 }
 body:before {
   content: '';
@@ -45,6 +45,7 @@ body:before {
   background: #fbfaed;
   border-radius: 3px;
   border: 1px solid #fff;
-  width: 513px;
+  max-width: 513px;
+  widht: 100%;
   margin: 0 auto;
 }
