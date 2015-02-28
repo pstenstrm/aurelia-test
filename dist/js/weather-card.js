@@ -12,7 +12,7 @@ System.register(["aurelia-framework"], function (_export) {
       _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
 
       WeatherCard = _export("WeatherCard", (function () {
-        function WeatherCard(weather) {
+        function WeatherCard() {
           _classCallCheck(this, WeatherCard);
 
           console.log(this);
@@ -21,7 +21,7 @@ System.register(["aurelia-framework"], function (_export) {
         _prototypeProperties(WeatherCard, {
           metadata: {
             value: function metadata() {
-              return Behavior.withProperty("weather");
+              return Behavior.withProperty("weather").withProperty("destroy");
             },
             writable: true,
             configurable: true
@@ -46,4 +46,4 @@ System.register(["aurelia-framework"], function (_export) {
     }
   };
 });
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImpzL3dlYXRoZXItY2FyZC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7TUFBUSxRQUFRLHlDQUVILFdBQVc7OztBQUZoQixjQUFRLHFCQUFSLFFBQVE7Ozs7Ozs7QUFFSCxpQkFBVztBQUdaLGlCQUhDLFdBQVcsQ0FHWCxPQUFPO2dDQUhQLFdBQVc7O0FBSXRCLGlCQUFPLENBQUMsR0FBRyxDQUFDLElBQUksQ0FBQyxDQUFDO1NBQ2xCOzs2QkFMVyxXQUFXO0FBQ2hCLGtCQUFRO21CQUFBLG9CQUFFO0FBQUUscUJBQU8sUUFBUSxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUMsQ0FBQzthQUFFOzs7OztBQU16RCxpQkFBTztpQkFBQSxZQUFHO0FBQ2IscUJBQU8sRUFBQyxFQUFFLEtBQUcsSUFBSSxDQUFDLE9BQU8sQ0FBQyxJQUFJLENBQUMsSUFBSSxHQUFLLE1BQU0sQ0FBQSxBQUFDLENBQUM7YUFDaEQ7OztBQUVHLGtCQUFRO2lCQUFBLFlBQUc7QUFDZCwwQkFBVSxJQUFJLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBRzthQUM5Qjs7Ozs7ZUFiVyxXQUFXIiwiZmlsZSI6ImpzL3dlYXRoZXItY2FyZC5qcyIsInNvdXJjZVJvb3QiOiIvc3JjL2pzIn0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImpzL3dlYXRoZXItY2FyZC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7TUFBUSxRQUFRLHlDQUVILFdBQVc7OztBQUZoQixjQUFRLHFCQUFSLFFBQVE7Ozs7Ozs7QUFFSCxpQkFBVztBQUdaLGlCQUhDLFdBQVc7Z0NBQVgsV0FBVzs7QUFJdEIsaUJBQU8sQ0FBQyxHQUFHLENBQUMsSUFBSSxDQUFDLENBQUM7U0FDbEI7OzZCQUxXLFdBQVc7QUFDaEIsa0JBQVE7bUJBQUEsb0JBQUU7QUFBRSxxQkFBTyxRQUFRLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUMsQ0FBQzthQUFFOzs7OztBQU1qRixpQkFBTztpQkFBQSxZQUFHO0FBQ2IscUJBQU8sRUFBQyxFQUFFLEtBQUcsSUFBSSxDQUFDLE9BQU8sQ0FBQyxJQUFJLENBQUMsSUFBSSxHQUFLLE1BQU0sQ0FBQSxBQUFDLENBQUM7YUFDaEQ7OztBQUVHLGtCQUFRO2lCQUFBLFlBQUc7QUFDZCwwQkFBVSxJQUFJLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBRzthQUM5Qjs7Ozs7ZUFiVyxXQUFXIiwiZmlsZSI6ImpzL3dlYXRoZXItY2FyZC5qcyIsInNvdXJjZVJvb3QiOiIvc3JjL2pzIn0=

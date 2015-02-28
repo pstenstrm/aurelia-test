@@ -1,9 +1,9 @@
 import {Behavior} from 'aurelia-framework';
 
 export class WeatherCard {
-	static metadata(){ return Behavior.withProperty('weather'); }
+	static metadata(){ return Behavior.withProperty('weather').withProperty('destroy'); }
 
-	constructor(weather) {
+	constructor() {
 		console.log(this);
 	}
 

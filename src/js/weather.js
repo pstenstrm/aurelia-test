@@ -1,7 +1,8 @@
 import {HttpClient} from 'aurelia-http-client';
 
 var 
-	url = 'http://api.openweathermap.org/data/2.5/weather?q=';
+	url = 'http://api.openweathermap.org/data/2.5/weather?q=',
+	self;
 
 export class Weather {
 	static inject() { return [HttpClient]; }
@@ -10,6 +11,8 @@ export class Weather {
 		this.http = http;
 		this.location = 'Paris';
 		this.locations = [];
+
+		self = this;
 	}
 
 	activate() {
@@ -24,5 +27,9 @@ export class Weather {
 
 			this.locations.push(json);
 		});
+	}
+
+	closeCard() {
+		self.locations.splice(self.locations.indexOf(this.weather), 1);
 	}
 }

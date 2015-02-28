@@ -12,7 +12,7 @@
 
 	<ul class="weather-cards">
 		<li repeat.for="weather of locations">
-			<weather-card weather.bind="weather"></weather-card>
+			<weather-card weather.bind="weather" destroy.bind="$parent.closeCard"></weather-card>
 		</li>
 	</ul>
 </template>
