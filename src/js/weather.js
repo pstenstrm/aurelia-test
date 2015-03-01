@@ -22,10 +22,11 @@ export class Weather {
 	search() {
 		return this.http.get(url + this.location).then(response => {
 			var
-				cleanResponse = response.response.replace(/^"|"$/g, "'"),
+				cleanResponse = response.response.replace(/^"|"$/g, ''),
 				json = JSON.parse(cleanResponse);
 
 			this.locations.push(json);
+			this.location = '';
 		});
 	}
 

@@ -11,7 +11,7 @@
 	<import from='./weather-card'></import>
 
 	<ul class="weather-cards">
-		<li repeat.for="weather of locations">
+		<li repeat.for="weather of locations" class="item">
 			<weather-card weather.bind="weather" destroy.bind="$parent.closeCard"></weather-card>
 		</li>
 	</ul>

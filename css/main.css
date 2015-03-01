@@ -5,6 +5,7 @@ body {
   margin: 0;
   background: linear-gradient(144deg, #f7f4d6, #f7f4d6 50%, #abd4e2);
   background-size: cover;
+  font-family: 'Lato', sans-serif;
 }
 body:before {
   content: '';
@@ -41,6 +42,16 @@ body:before {
   right: 10px;
   top: 0;
 }
+.weather-cards {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.weather-cards > .item {
+  display: inline-block;
+  margin: 30px 5px;
+}
 .weather {
   background: #fbfaed;
   border-radius: 3px;
@@ -48,4 +59,7 @@ body:before {
   max-width: 513px;
   widht: 100%;
   margin: 0 auto;
+}
+.weather > .heading {
+  font-family: 'Pacifico';
 }

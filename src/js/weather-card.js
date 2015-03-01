@@ -26,15 +26,22 @@ export class WeatherCard {
 		return `${this.weather.name}`;
 	}
 
+	get icon() {
+		return this.weather.weather[0].icon;
+	}
+
+	get description() {
+		return this.weather.weather[0].description;
+	}
+
 	getCountryName() {
 		var
-			self = this,
-			name;
+			self = this;
 
-		setTimeout(function(){
+		setTimeout(function() {
 			self.http.get(url + `${self.weather.sys.country}`).then(response => {
 				var
-					cleanResponse = response.response.replace(/^"|"$/g, "'"),
+					cleanResponse = response.response.replace(/^"|"$/g, ''),
 					json = JSON.parse(cleanResponse);
 
 				self.countryName = json.name;

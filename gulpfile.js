@@ -10,6 +10,7 @@
 		nib = require("nib"),
 		chalk = require("chalk"),
 		fs = require("fs"),
+		inlineSvg = require('stylus-inline-svg'),
 		jshintrc = JSON.parse(fs.readFileSync("./.jshintrc", "utf-8")),
 		paths = {
 			js: {
@@ -38,7 +39,9 @@
 		return gulp.src(paths.css.source)
 			.pipe(stylus({
 				use: [nib()],
-				url: 'url'
+				define: {
+					url: inlineSvg()
+				}
 			})
 			.on('error', stylError))
 			.pipe(gulp.dest(paths.css.dest));
@@ -58,7 +61,7 @@
 
 	gulp.task("ExtraWatch", ["jsExtraWatch", "cssExtraWatch"]);
 
-	gulp.task("default", ["ExtraWatch"]);
+	gulp.task("default", ["ExtraWatch", 'watch']);
 
 	function stylError(err) {
 		console.log(err.message);

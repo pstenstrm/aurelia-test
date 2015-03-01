@@ -1,6 +1,6 @@
 {
   "name": "aurelia",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vinnovera arbetsprov i Aurelia",
   "main": "index.js",
   "scripts": {
@@ -44,6 +44,8 @@
     "require-dir": "^0.1.0",
     "run-sequence": "^1.0.2",
     "vinyl-paths": "^1.0.0",
-    "yargs": "^3.3.1"
+    "yargs": "^3.3.1",
+    "stylus-inline-svg": "^0.1.1",
+    "stylus": "^0.50.0"
   }
 }

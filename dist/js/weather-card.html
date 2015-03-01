@@ -1,5 +1,8 @@
 <template>
-	<a href="#" click.delegate="destroy()">Close</a>
-	<span>${celcius} <sup>o</sup>C</span>
-	<h1>${location}, ${countryName}</h1>
+	<div class="weather-card">
+		<span class="icon icon-${icon}">${description}</span>
+		<span>${celcius} <sup>o</sup>C</span>
+		<h1>${location}, ${countryName}</h1>
+		<a href="#" click.delegate="destroy()">Close</a>
+	</div>
 </template>
