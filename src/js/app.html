@@ -1,5 +1,12 @@
 <template>
 	<header class="banner">
+		<nav class="nav-bar">
+			<ul class="list">
+	      <li repeat.for="row of router.navigation" class="item ${row.isActive ? 'active' : ''}">
+	        <a href.bind="row.href">${row.title}</a>
+	      </li>
+	    </ul>
+		</nav>
 		<h1 class="logo">Vinnovera</h1>
 	</header>
 	<router-view></router-view>

@@ -34,6 +34,19 @@ export class WeatherCard {
 		return this.weather.weather[0].description;
 	}
 
+	get color() {
+		var 
+			key = 'cold';
+
+		if(this.celcius > 20) {
+			key = 'warmer';
+		} else if(this.celcius > 10) {
+			key = 'warm';
+		}
+
+		return key;
+	}
+
 	getCountryName() {
 		var
 			self = this;

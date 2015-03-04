@@ -8,8 +8,8 @@ export class App {
 
 		this.router.configure(config => {
 			config.map([
-				{ route: '',      moduleId: 'weather', nav: true, title: 'Vinnovera Väder App' },
-				{ route: 'about', moduleId: 'about',   nav: true, title: 'Om Vinnovera Väder App' }
+				{ route: '',      moduleId: 'weather', nav: true, title: 'Weather' },
+				{ route: 'about', moduleId: 'about',   nav: true, title: 'About the Weather' }
 			]);
 		});
 	}
