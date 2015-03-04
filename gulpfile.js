@@ -40,7 +40,7 @@
 			.pipe(stylus({
 				use: [nib()],
 				define: {
-					url: inlineSvg()
+					url: inlineSvg({paths: ['src/styl']})
 				}
 			})
 			.on('error', stylError))

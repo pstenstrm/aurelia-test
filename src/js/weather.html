@@ -1,12 +1,12 @@
 <template>
-	<fieldset class="weather">
-		<legend class="heading">How's the weather in...</legend>
+	<section class="weather">
+		<h1 class="heading">How's the weather in...</h1>
 		<form submit.delegate="search()" class="search-box">
 			<label class="label" for="location">Location:</label>
 			<input type="search" class="search" id="location" value.bind="location" placeholde="Paris">
 			<button type="submit" class="btn search-btn">Search</button>
 		</form>
-	</fieldset>
+	</section>
 
 	<import from='./weather-card'></import>
 

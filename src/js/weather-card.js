@@ -11,7 +11,7 @@ export class WeatherCard {
 
 	constructor(http) {
 		this.http = http;
-		this.countryName = null;
+		this.countryName;
 
 		console.log(this);
 
@@ -19,7 +19,7 @@ export class WeatherCard {
 	}
 
 	get celcius() {
-		return ~~(`${this.weather.main.temp}` - 273.15);
+		return Math.round(`${this.weather.main.temp}` - 273.15);
 	}
 
 	get location() {
@@ -39,6 +39,12 @@ export class WeatherCard {
 			self = this;
 
 		setTimeout(function() {
+			if(`${self.weather.sys.country}`.length > 2) {
+				
+				self.countryName = `${self.weather.sys.country}`;
+				return;
+			}
+
 			self.http.get(url + `${self.weather.sys.country}`).then(response => {
 				var
 					cleanResponse = response.response.replace(/^"|"$/g, ''),

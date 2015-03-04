@@ -1,0 +1,85 @@
+.weather-card
+	color: pink
+	background: currentColor
+	border-radius: 2px
+	padding: 19px 20px 23px 116px
+	width: 280px
+	box-sizing: border-box
+	position: relative
+	overflow: hidden
+
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		background: rgba(130,130,130,.1)
+		z-index: 0
+		height: 19px
+		top: 20px
+		right -17px
+		width: 40px
+		transform: rotate(45deg)
+
+	> .icon
+		position: absolute
+		width: 116px
+		height: 100%
+		left: 0
+		top: 0
+		text-indent: -999px
+		
+	> .location
+		font-weight: normal
+		font-size: 18px
+		white-space: no-wrap
+		overflow: hidden
+		text-overflow: ellipsis
+		margin: 7px 0 0
+		color: #fff
+		
+	> .close
+		position: absolute
+		top: 7px
+		right: 7px
+		color: inherit
+		background: #fff
+		display: block
+		border-radius: 50%
+		text-decoration: none
+		width: 19px
+		line-height: 1
+		padding: 0 0 3px
+		text-align: center
+		z-index: 1
+		overflow: hidden
+		text-indent: -999px
+		
+		&:before,
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			background: currentColor
+			width: 11px
+			height: 2px
+			left: 4px
+			top: 9px
+
+		&:before
+			transform: rotate(45deg)
+			
+		&:after
+			transform: rotate(-45deg)
+
+.temperature 
+	font-size: 36px
+	font-weight: lighter
+	vertical-align: top
+	color: #fff
+	letter-spacing: -2px
+	
+	> .degrees
+		letter-spacing: normal
+		font-size: 14px
+		line-height: 20px
+		font-weight: bold
